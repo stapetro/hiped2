@@ -104,6 +104,7 @@
                             <version>${maven.javadoc.version}</version>
                             <configuration>
                                 <aggregate>true</aggregate>
+                                <excludePackageNames>hip.*</excludePackageNames>
                             </configuration>
                         </plugin>
 
@@ -156,6 +157,9 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>${maven.javadoc.version}</version>
+                <configuration>
+                    <excludePackageNames>hip.*</excludePackageNames>
+                </configuration>
                 <executions>
                     <execution>
                         <id>attach-javadocs</id>
@@ -251,7 +255,7 @@
                             <pomFile>${basedir}/lib/camus-api-0.1.0-SNAPSHOT.xml</pomFile>
                         </configuration>
                     </execution>
-                    <execution>
+                    <!--<execution>
                         <id>install-elephantbird-core</id>
                         <phase>validate</phase>
                         <goals>
@@ -310,7 +314,7 @@
                             <file>${basedir}/lib/elephant-bird-hive-4.5-SNAPSHOT.jar</file>
                             <pomFile>${basedir}/lib/elephant-bird-hive-4.5-SNAPSHOT.xml</pomFile>
                         </configuration>
-                    </execution>
+                    </execution>-->
                     <execution>
                         <id>install-htuple</id>
                         <phase>validate</phase>
@@ -653,22 +657,22 @@
         <dependency>
             <groupId>com.twitter.elephantbird</groupId>
             <artifactId>elephant-bird-core</artifactId>
-            <version>4.5-SNAPSHOT</version>
+            <version>4.5</version>
         </dependency>
         <dependency>
             <groupId>com.twitter.elephantbird</groupId>
             <artifactId>elephant-bird-hadoop-compat</artifactId>
-            <version>4.5-SNAPSHOT</version>
+            <version>4.5</version>
         </dependency>
         <dependency>
             <groupId>com.twitter.elephantbird</groupId>
             <artifactId>elephant-bird-pig</artifactId>
-            <version>4.5-SNAPSHOT</version>
+            <version>4.5</version>
         </dependency>
         <dependency>
             <groupId>com.twitter.elephantbird</groupId>
             <artifactId>elephant-bird-hive</artifactId>
-            <version>4.5-SNAPSHOT</version>
+            <version>4.5</version>
         </dependency>
 
 
